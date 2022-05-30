@@ -1,0 +1,68 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>修改密码</title>
+     <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <script>
+        function checkform3(){
+            if (document.form1.username.value == "") {
+          alert("原密码不能为空！")
+          return false;
+      }
+
+      if (document.form1.password.value == "") {
+          alert("密码不能为空！");
+          return false;
+      }
+      if (document.form2.password1.value == "") {
+          alert("确认密码不能为空！");
+          return false;
+      }
+      if (document.form1.password1.value.length<6){
+          alert("密码长度不能低于6");
+          return false;
+      }
+      if (document.form1.password.value !=document.form1.password1.value) {
+          alert("两次密码不一致！");
+          return false;
+      }
+        }
+    </script>
+</head>
+<body  onload="changeImg()" style=" background-image: url({% static 'images/bg.jpg' %})">
+
+    <div class="form" style="position:relative">
+        <!--登录表单-->
+        <div class="form_login" >
+
+			<form name="form1" method="post">
+				<h1>修改密码</h1>
+				<div class="form_item">
+					<label for="username">原密码：</label>
+					<input type="password" name="username" id="username" placeholder="请输入原密码" required>
+				</div>
+				<div class="form_item">
+					<label for="password">新密码：</label>
+					<input type="password" name="password" id="password" placeholder="请输入新密码" required/>
+				</div>
+                <div class="form_item">
+					<label for="password">确认密码：</label>
+					<input type="password" name="password1" id="password1" placeholder="请确认新密码" required/>
+				</div>
+                <p>{{msg}}</p>
+
+				<div class="form_item">
+					<input type="submit" value="确认修改" onclick="javascript:return(checkform3());"/>
+				</div>
+			</form>
+			<div class="info">现在去<a href="login.html">登录</a></div>
+
+         </div>
+
+
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,107 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>登录</title>
+
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <script>
+        function checkform1() {
+     if (document.form1.username.value == "") {
+         alert("用户名不能为空！")
+         return false;
+     }
+
+     if (document.form1.password.value == "") {
+         alert("密码不能为空！");
+         return false;
+     }
+     if (document.form1.code.value == "") {
+         alert("验证码不能为空！");
+         return false;
+     }
+     var input_code=document.getElementById('vcode').value;
+     if(input_code.toLowerCase()==code.toLowerCase())
+     {
+         //验证码正确(表单提交)
+         return true;
+     }
+     else{
+         alert("请输入正确的验证码!");
+         //验证码不正确,表单不允许提交
+         return false;
+     }
+     return true;
+ }
+
+    </script>
+    <script >
+		var code;//声明一个变量用于存储生成的验证码
+		document.getElementById("code").οnclick=changeImg;
+		function changeImg(){
+			//alert("换图片");
+			var arrays=new Array(
+				'1','2','3','4','5','6','7','8','9','0',
+				'a','b','c','d','e','f','g','h','i','j',
+				'k','l','m','n','o','p','q','r','s','t',
+				'u','v','w','x','y','z',
+				'A','B','C','D','E','F','G','H','I','J',
+				'K','L','M','N','O','P','Q','R','S','T',
+				'U','V','W','X','Y','Z'
+			);
+			code='';//重新初始化验证码
+			//alert(arrays.length);
+			//随机从数组中获取四个元素组成验证码
+			for(var i=0;i<4;i++){
+			//随机获取一个数组的下标
+				var r=parseInt(Math.random()*arrays.length);
+				code+=arrays[r];
+				//alert(arrays[r]);
+			}
+			//alert(code);
+			document.getElementById('code').innerHTML=code;//将验证码写入指定区域
+		}
+	</script>
+
+</head>
+<body  onload="changeImg()" style=" background-image: url({% static 'images/bg.jpg' %})">
+
+    <div class="form" style="position:relative">
+        <!--登录表单-->
+        <div class="form_login" >
+
+			<form name="form1" method="post">
+				<h1>登录表单</h1>
+				<div class="form_item">
+					<label for="username">用户名：</label>
+					<input type="text" name="username" id="username" placeholder="请输入用户名" required>
+				</div>
+				<div class="form_item">
+					<label for="password">密码：</label>
+					<input type="password" name="password" id="password" placeholder="请输入密码" required/>
+				</div>
+
+                <div class="form_item">
+                    <label for="code">验证码：</label>
+                    <input type="text" name="code" id="vcode" placeholder="验证码" value=""/>&nbsp;
+                    <span id="code" title="看不清，换一张" onclick="changeImg()"></span>
+
+                </div>
+                <p>{{msg}}</p>
+
+				<div class="form_item">
+					<input type="submit" value="登录" onclick="javascript:return(checkform1());"/>
+				</div>
+			</form>
+			<div class="info">没有账号？点击<a href="register.html">注册账号</a></div>
+
+         </div>
+
+
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,95 @@
+html{
+    height: 100%;
+}
+
+
+.danghang{
+    padding-top: 30px;
+    font-family: "微软雅黑 Light";
+    font-weight: bold;
+    color: black;
+    letter-spacing: 1pt;
+    font-size: 20px;
+}
+.news{
+    padding-top:25px;
+    padding-left:300px;
+}
+.collect{
+    padding-top:50px;
+    padding-left:400px;
+}
+.login{
+    height: 5px;
+    width: 100%;
+    padding-top: 0px;
+    padding-left: 1350px;
+}
+
+.content{
+    text-align: left;
+    font-family: "微软雅黑 Light";
+    font-weight: bold;
+    color: black;
+    letter-spacing: 1pt;
+    font-width: bold;
+
+
+}
+.heat_content{
+    text-align: left;
+    font-family: "微软雅黑 Light";
+    font-weight: bold;
+    color: black;
+    letter-spacing: 1pt;
+    font-width: bold;
+    padding-top: 15px;
+
+}
+
+.xingweng{
+    padding-right: 200px;
+}
+.heat{
+    position: absolute;
+    left: 1050px;
+    top: 200px;
+}
+
+
+.search{
+    position: absolute;
+    left: 1050px;
+    top: 150px;
+}
+table{
+    border-top: 1px solid #000000;
+    border-right:1px solid #000000;
+    border-bottom: 1px solid #000000;
+    border-left: 1px solid #000000;
+}
+
+#search1{
+    width: 400px;
+    border-radius: 3px;
+    height: 36px;
+}
+
+
+
+
+a{
+    text-decoration : none;
+}
+a:link{
+    color: black;
+}
+
+a:hover{
+    color: cornflowerblue;
+}
+a:active{
+    color: black;
+}
+
+

@@ -1,0 +1,250 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>新闻推荐</title>
+    <link rel="stylesheet" href="{% static 'css/recommend.css' %}">
+
+</head>
+
+<body>
+<div class="login">欢迎<a href="usercollect.html">{{a}}</a>&nbsp;<a href="alter.html">修改密码</a>&nbsp;<a href="login.html">注销</a></div>
+<div class="all">
+    <div class="danghang" align="center">
+        <ul>
+            <a href="recommend.html">推荐</a>&nbsp&nbsp&nbsp;
+            <a href="yangshi.html">央视新闻</a>&nbsp&nbsp&nbsp;
+            <a href="xinghua.html">新华网</a>&nbsp&nbsp&nbsp;
+            <a href="renming.html">人民日报</a>&nbsp&nbsp&nbsp;
+            <a href="qingnian.html">中国青年报</a>&nbsp&nbsp&nbsp;
+            <a href="zhongguo.html">中国日报网</a>&nbsp&nbsp&nbsp;
+        </ul>
+    </div>
+    <div class="xinweng">
+    <div class="news">
+        <div class="content"><a href="detail.html/?link={{link1}}&title={{title1}}">{{title1}}</a><a href="collect.html?link={{link1}}&title={{title1}}">
+            <span id="collect1"></span></a></div>
+        {% if flag1 %}
+        <script>document.getElementById('collect1').innerText='🧡'</script>
+        {% else %}
+        <script>document.getElementById('collect1').innerText='🤍'</script>
+        {% endif %}
+    </div>
+    <div class="news" >
+        <div class="content"><a href="detail.html/?link={{link2}}&title={{title2}}">{{title2}}</a><a href="collect.html?link={{link2}}&title={{title2}}">
+            <span id="collect2"></span></a></div>
+        {% if flag2 %}
+        <script>document.getElementById('collect2').innerText='🧡'</script>
+        {% else %}
+        <script>document.getElementById('collect2').innerText='🤍'</script>
+        {% endif %}</div>
+    </div>
+    <div class="news" >
+        <div class="content"><a href="detail.html/?link={{link3}}&title={{title3}}">{{title3}}</a><a href="collect.html?link={{link2}}&title={{title3}}">
+            <span id="collect3"></span></a></div>
+        {% if flag3 %}
+        <script>document.getElementById('collect3').innerText='🧡'</script>
+        {% else %}
+        <script>document.getElementById('collect3').innerText='🤍'</script>
+        {% endif %}</div>
+    </div>
+    <div class="news">
+        <div class="content"><a href="detail.html/?link={{link4}}&title={{title4}}">{{title4}}</a><a href="collect.html?link={{link4}}&title={{title4}}">
+            <span id="collect4"></span></a></div>
+        {% if flag4 %}
+        <script>document.getElementById('collect4').innerText='🧡'</script>
+        {% else %}
+        <script>document.getElementById('collect4').innerText='🤍'</script>
+        {% endif %}</div>
+    </div>
+    <div class="news">
+        <div class="content"><a href="detail.html/?link={{link5}}&title={{title5}}">{{title5}}</a><a href="collect.html?link={{link5}}&title={{title5}}">
+            <span id="collect5"></span></a></div>
+        {% if flag5 %}
+        <script>document.getElementById('collect5').innerText='🧡'</script>
+        {% else %}
+        <script>document.getElementById('collect5').innerText='🤍'</script>
+        {% endif %}</div>
+    </div>
+     <div class="news" >
+        <div class="content"><a href="detail.html/?link={{link6}}&title={{title6}}">{{title6}}</a><a href="collect.html?link={{link6}}&title={{title6}}">
+            <span id="collect6"></span></a></div>
+        {% if flag6 %}
+        <script>document.getElementById('collect6').innerText='🧡'</script>
+        {% else %}
+        <script>document.getElementById('collect6').innerText='🤍'</script>
+        {% endif %}</div>
+    </div>
+     <div class="news">
+        <div class="content"><a href="detail.html/?link={{link7}}&title={{title7}}">{{title7}}</a><a href="collect.html?link={{link7}}&title={{title7}}">
+            <span id="collect7"></span></a></div>
+        {% if flag7 %}
+        <script>document.getElementById('collect7').innerText='🧡'</script>
+        {% else %}
+        <script>document.getElementById('collect7').innerText='🤍'</script>
+        {% endif %}</div>
+    </div>
+     <div class="news">
+        <div class="content"><a href="detail.html/?link={{link8}}&title={{title8}}">{{title8}}</a><a href="collect.html?link={{link8}}&title={{title8}}">
+            <span id="collect8"></span></a></div>
+        {% if flag8 %}
+        <script>document.getElementById('collect8').innerText='🧡'</script>
+        {% else %}
+        <script>document.getElementById('collect8').innerText='🤍'</script>
+        {% endif %}</div>
+    </div>
+     <div class="news">
+        <div class="content"><a href="detail.html/?link={{link9}}&title={{title9}}">{{title9}}</a><a href="collect.html?link={{link9}}&title={{title9}}">
+            <span id="collect9"></span></a></div>
+        {% if flag9 %}
+        <script>document.getElementById('collect9').innerText='🧡'</script>
+        {% else %}
+        <script>document.getElementById('collect9').innerText='🤍'</script>
+        {% endif %}</div>
+    </div>
+     <div class="news">
+        <div class="content"><a href="detail.html/?link={{link10}}&title={{title10}}">{{title10}}</a><a href="collect.html?link={{link10}}&title={{title10}}">
+            <span id="collect10"></span></a></div>
+        {% if flag10 %}
+        <script>document.getElementById('collect10').innerText='🧡'</script>
+        {% else %}
+        <script>document.getElementById('collect10').innerText='🤍'</script>
+        {% endif %}</div>
+    </div>
+     <div class="news">
+        <div class="content"><a href="detail.html/?link={{link11}}&title={{title11}}">{{title11}}</a><a href="collect.html?link={{link11}}&title={{title11}}">
+            <span id="collect11"></span></a></div>
+        {% if flag11 %}
+        <script>document.getElementById('collect11').innerText='🧡'</script>
+        {% else %}
+        <script>document.getElementById('collect11').innerText='🤍'</script>
+        {% endif %}</div>
+    </div>
+     <div class="news">
+        <div class="content"><a href="detail.html/?link={{link12}}&title={{title12}}">{{title12}}</a><a href="collect.html?link={{link12}}&title={{title12}}">
+            <span id="collect12"></span></a></div>
+        {% if flag12 %}
+        <script>document.getElementById('collect12').innerText='🧡'</script>
+        {% else %}
+        <script>document.getElementById('collect12').innerText='🤍'</script>
+        {% endif %}</div>
+    </div>
+     <div class="news">
+        <div class="content"><a href="detail.html/?link={{link13}}&title={{title13}}">{{title13}}</a><a href="collect.html?link={{link13}}&title={{title13}}">
+            <span id="collect13"></span></a></div>
+        {% if flag13 %}
+        <script>document.getElementById('collect13').innerText='🧡'</script>
+        {% else %}
+        <script>document.getElementById('collect13').innerText='🤍'</script>
+        {% endif %}</div>
+    </div>
+    <form class="form3" method="post">
+        <div class="search">
+            <input type="text" name="search1" id="search1" placeholder="请输入搜索关键词">&nbsp;
+            <a href="search.html"><input type="submit" value="搜索"></a>
+        </div>
+    </form>
+    <div class="heat">
+        <table border="0" cellspacing="0">
+        <tr><td align="center"><p>热门新闻</p></td></tr>
+        <tr><td><div class="heat_content"><a href="detail.html/?link={{heat_link1}}&title={{heat_title1}}">{{heat_title1}}</a><a href="collect.html?link={{heat_link1}}&title={{heat_title1}}">
+            <span id="heat_collect1"></span></a></div>
+        {% if heat_flag1 %}
+        <script>document.getElementById('heat_collect1').innerText='🧡'</script>
+        {% else %}
+        <script>document.getElementById('heat_collect1').innerText='🤍'</script>
+        {% endif %}
+        </td>
+        </tr>
+        <tr><td><div class="heat_content"><a href="detail.html/?link={{heat_link2}}&title={{heat_title2}}">{{heat_title2}}</a><a href="collect.html?link={{heat_link2}}&title={{heat_title2}}">
+            <span id="heat_collect2"></span></a></div>
+        {% if heat_flag2 %}
+        <script>document.getElementById('heat_collect2').innerText='🧡'</script>
+        {% else %}
+        <script>document.getElementById('heat_collect2').innerText='🤍'</script>
+        {% endif %}
+        </td>
+        </tr>
+        <tr><td><div class="heat_content"><a href="detail.html/?link={{heat_link3}}&title={{heat_title3}}">{{heat_title3}}</a><a href="collect.html?link={{heat_link3}}&title={{heat_title3}}">
+            <span id="heat_collect3"></span></a></div>
+        {% if heat_flag3 %}
+        <script>document.getElementById('heat_collect3').innerText='🧡'</script>
+        {% else %}
+        <script>document.getElementById('heat_collect3').innerText='🤍'</script>
+        {% endif %}
+        </td>
+        </tr>
+        <tr><td><div class="heat_content"><a href="detail.html/?link={{heat_link4}}&title={{heat_title4}}">{{heat_title4}}</a><a href="collect.html?link={{heat_link4}}&title={{heat_title4}}">
+            <span id="heat_collect4"></span></a></div>
+        {% if heat_flag4 %}
+        <script>document.getElementById('heat_collect4').innerText='🧡'</script>
+        {% else %}
+        <script>document.getElementById('heat_collect4').innerText='🤍'</script>
+        {% endif %}
+        </td>
+        </tr>
+        <tr><td><div class="heat_content"><a href="detail.html/?link={{heat_link5}}&title={{heat_title5}}">{{heat_title5}}</a><a href="collect.html?link={{heat_link5}}&title={{heat_title5}}">
+            <span id="heat_collect5"></span></a></div>
+        {% if heat_flag5 %}
+        <script>document.getElementById('heat_collect5').innerText='🧡'</script>
+        {% else %}
+        <script>document.getElementById('heat_collect5').innerText='🤍'</script>
+        {% endif %}
+        </td>
+        </tr>
+        <tr><td><div class="heat_content"><a href="detail.html/?link={{heat_link6}}&title={{heat_title6}}">{{heat_title6}}</a><a href="collect.html?link={{heat_link6}}&title={{heat_title6}}">
+            <span id="heat_collect6"></span></a></div>
+        {% if heat_flag6 %}
+        <script>document.getElementById('heat_collect6').innerText='🧡'</script>
+        {% else %}
+        <script>document.getElementById('heat_collect6').innerText='🤍'</script>
+        {% endif %}
+        </td>
+        </tr>
+        <tr><td><div class="heat_content"><a href="detail.html/?link={{heat_link7}}&title={{heat_title7}}">{{heat_title7}}</a><a href="collect.html?link={{heat_link7}}&title={{heat_title7}}">
+            <span id="heat_collect7"></span></a></div>
+        {% if heat_flag7 %}
+        <script>document.getElementById('heat_collect7').innerText='🧡'</script>
+        {% else %}
+        <script>document.getElementById('heat_collect7').innerText='🤍'</script>
+        {% endif %}
+        </td>
+        </tr>
+        <tr><td><div class="heat_content"><a href="detail.html/?link={{heat_link8}}&title={{heat_title8}}">{{heat_title8}}</a><a href="collect.html?link={{heat_link8}}&title={{heat_title8}}">
+            <span id="heat_collect8"></span></a></div>
+        {% if heat_flag8 %}
+        <script>document.getElementById('heat_collect8').innerText='🧡'</script>
+        {% else %}
+        <script>document.getElementById('heat_collect8').innerText='🤍'</script>
+        {% endif %}
+        </td>
+        </tr>
+        <tr><td><div class="heat_content"><a href="detail.html/?link={{heat_link9}}&title={{heat_title9}}">{{heat_title9}}</a><a href="collect.html?link={{heat_link9}}&title={{heat_title9}}">
+            <span id="heat_collect9"></span></a></div>
+        {% if heat_flag9 %}
+        <script>document.getElementById('heat_collect9').innerText='🧡'</script>
+        {% else %}
+        <script>document.getElementById('heat_collect9').innerText='🤍'</script>
+        {% endif %}
+        </td>
+        </tr>
+        <tr><td><div class="heat_content"><a href="detail.html/?link={{heat_link10}}&title={{heat_title10}}">{{heat_title10}}</a><a href="collect.html?link={{heat_link10}}&title={{heat_title10}}">
+            <span id="heat_collect10"></span></a></div>
+        {% if heat_flag10 %}
+        <script>document.getElementById('heat_collect10').innerText='🧡'</script>
+        {% else %}
+        <script>document.getElementById('heat_collect10').innerText='🤍'</script>
+        {% endif %}
+        </td>
+        </tr>
+        </table>
+    </div>
+
+</div>
+
+
+</body>
+</html>

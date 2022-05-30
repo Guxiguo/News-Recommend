@@ -1,0 +1,40 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>新闻推荐</title>
+    <link rel="stylesheet" href="{% static 'css/recommend.css' %}">
+
+</head>
+
+<body>
+<div class="login">欢迎{{a}}&nbsp&nbsp;<a href="recommend.html">返回</a></div>
+<div class="all">
+
+    <div class="collect">
+        <table border="0" cellspacing="0" style=" background-image: url({% static 'images/true.jpg' %}) ">
+        <tr><td align="center"><p>{{a}}的收藏记录</p></td></tr>
+           {% for title,link,flag,star in foo %}
+            <tr><td><div class="heat_content"><a href="detail.html/?link={{link}}&title={{title}}">{{title}}</a><a href="collect.html?link={{link}}&title={{title}}"><span id="{{star}}"></span></a></div>
+                {% if flag %}
+                <script>document.getElementById('{{star}}').innerText='🧡'</script>
+                {% else %}
+                <script>document.getElementById('{{star}}').innerText='🤍'</script>
+                {% endif %}
+            </td>
+            </tr>
+            {% empty %}
+            <p>{{a}}无收藏记录</p>
+            {% endfor %}
+
+        </table>
+    </div>
+
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,16 @@
+Index: NewsWeb/NewsWeb/settings.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/NewsWeb/NewsWeb/settings.py b/NewsWeb/NewsWeb/settings.py
+--- a/NewsWeb/NewsWeb/settings.py	
++++ b/NewsWeb/NewsWeb/settings.py	(date 1647674695975)
+@@ -37,6 +37,7 @@
+     'django.contrib.sessions',
+     'django.contrib.messages',
+     'django.contrib.staticfiles',
++    'Login',
+ ]
+ 
+ MIDDLEWARE = [

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="http://at.alicdn.com/t/font_2226582_dki77h4juap.css">
+    <style>
+        /* 设置一个居中的盒子 */
+
+
+        /* 设置一个盒子放收藏按钮 */
+
+        /* 设置一个放字体图标及复选框的盒子 */
+
+        /* 设置字体图标大小 */
+        i,
+        .iconfont {
+            /*font-size: 60px;*/
+            color: red;
+        }
+
+        /* 定位复选框位置，和其他两个心重叠，并设置透明度为0，提高层级 */
+        input {
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            opacity: 0;
+            z-index: 2;
+
+        }
+
+        /* 选中复选框的兄弟元素，当复选框状态为复选时，使它隐藏 */
+        input:checked+.icon {
+            display: none;
+        }
+
+         /* 定位字体图标 使它和复选框与另一个字体图标重叠 */
+        .icon {
+            position: absolute;
+            left: 8px;
+            top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 设置一个居中的盒子 -->
+            <input type="checkbox" checked>
+            <!-- 字体图标实心 -->
+            <i class="iconfont icon-shoucangshixin1  icon"></i>
+            <!-- 字体图标空心-->
+            <i class="iconfont icon-shoucang1"></i>
+</body>
+
+</html>
